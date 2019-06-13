@@ -27,6 +27,7 @@ public class RegistrarFragment extends Fragment implements Response.Listener<JSO
     JsonRequest jrq;
     EditText txtCorreo, txtPassword, txtNombre, txtDireccion, txtTelefono;
     Button btnRegistrar, btnSesion;
+    Button btnNose;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
