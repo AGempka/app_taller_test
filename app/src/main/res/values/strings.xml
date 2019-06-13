@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">app_taller</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="correo_cliente">Correo:</string>
+    <string name="password_cliente">Contraseña:</string>
+    <string name="nombre_cliente">Nombre:</string>
+    <string name="direccion_cliente">Direccion:</string>
+    <string name="telefono_cliente">Num. de Telefono:</string>
+    <string name="btn_sesion">Iniciar Sesión</string>
+    <string name="btn_registrar">Registrarse</string>
+</resources>
