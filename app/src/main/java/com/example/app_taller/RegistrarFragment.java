@@ -28,11 +28,12 @@ public class RegistrarFragment extends Fragment implements Response.Listener<JSO
     EditText txtCorreo, txtPassword, txtNombre, txtDireccion, txtTelefono;
     Button btnRegistrar, btnSesion;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View vista = inflater.inflate(R.layout.fragment_sesion, container, false);
+        View vista = inflater.inflate(R.layout.fragment_registrar, container, false);
         txtCorreo = (EditText) vista.findViewById(R.id.txtCorreo);
         txtPassword = (EditText) vista.findViewById(R.id.txtPassword);
         txtNombre = (EditText) vista.findViewById(R.id.txtNombre);
@@ -63,7 +64,8 @@ public class RegistrarFragment extends Fragment implements Response.Listener<JSO
 
 
         // Inflate the layout for this fragment
-        return  inflater.inflate(R.layout.fragment_registrar, container, false);
+     // return  inflater.inflate(R.layout.fragment_registrar, container, false);
+        return vista;
     }
 
 

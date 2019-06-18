@@ -28,7 +28,6 @@ import android.os.Bundle;
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_sesion);
-
             FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction().replace(R.id.escenario, new SesionFragment()).commit();
         }
