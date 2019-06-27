@@ -45,7 +45,7 @@ public class RegistrarFragment extends Fragment implements Response.Listener<JSO
         rq = Volley.newRequestQueue(getContext());
 
 
-
+//solo para probar lalalala
 
         btnSesion.setOnClickListener(new View.OnClickListener() {
             @Override
