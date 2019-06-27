@@ -8,6 +8,18 @@ public class Cliente {
     private String direccion_cliente;
     private String telefono_cliente;
 
+    public Cliente() {
+    }
+
+    public Cliente(Integer idcliente, String password_cliente, String nombre_cliente, String correo_cliente, String direccion_cliente, String telefono_cliente) {
+        this.idcliente = idcliente;
+        this.password_cliente = password_cliente;
+        this.nombre_cliente = nombre_cliente;
+        this.correo_cliente = correo_cliente;
+        this.direccion_cliente = direccion_cliente;
+        this.telefono_cliente = telefono_cliente;
+    }
+
     public Integer getIdcliente() {
         return idcliente;
     }
