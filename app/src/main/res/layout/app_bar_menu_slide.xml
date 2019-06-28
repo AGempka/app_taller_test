@@ -20,7 +20,9 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_menu_slide" />
+    <include
+        layout="@layout/content_menu_slide"
+        android:background="#007A7979" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
