@@ -146,18 +146,21 @@
 
     <Button
         android:id="@+id/btnRegistrar"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="243dp"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/btn_registrar"
         app:layout_constraintTop_toBottomOf="@+id/btnSesion" />
 
     <Button
         android:id="@+id/btnSesion"
+        style="@style/PrimaryColoredButton"
         android:layout_width="106dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:drawableRight="@drawable/ic_menu_back"
         android:text="Inicio"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
