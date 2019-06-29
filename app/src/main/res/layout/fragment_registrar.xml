@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/txtCorreo"
+                android:id="@+id/txtObservaciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
 
                 android:inputType="phone"
-                app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+                app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
                 app:layout_constraintEnd_toEndOf="parent"
 
                 app:layout_constraintStart_toStartOf="parent"

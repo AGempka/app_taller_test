@@ -17,9 +17,18 @@ android {
         }
     }
 }
-configurations.all {
-    resolutionStrategy.force 'com.android.support:support-annotations:23.1.0'
+
+configurations.all { //fix ClassNotFoundException : OnUnhandledKeyEventListener
+    resolutionStrategy.eachDependency { details ->
+        def requested = details.requested
+        if (requested.group == "com.android.support") {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion "26.+"
+            }
+        }
+    }
 }
+
 
 
 dependencies {

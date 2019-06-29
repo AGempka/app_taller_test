@@ -1,5 +1,4 @@
 package com.example.app_taller;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -17,8 +16,6 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -34,14 +31,14 @@ public class RegistrarFragment extends Fragment implements Response.Listener<JSO
                              Bundle savedInstanceState) {
 
         View vista = inflater.inflate(R.layout.fragment_registrar, container, false);
-        txtCorreo = (EditText) vista.findViewById(R.id.txtCorreo);
+        txtCorreo = (EditText) vista.findViewById(R.id.txtObservaciones);
         txtPassword = (EditText) vista.findViewById(R.id.txtPassword);
         txtNombre = (EditText) vista.findViewById(R.id.txtNombre);
         txtDireccion= (EditText) vista.findViewById(R.id.txtDireccion);
         txtTelefono=(EditText)vista.findViewById(R.id.txtTelefono);
         btnSesion=(Button) vista.findViewById(R.id.btnSesion);
 
-        btnRegistrar = (Button) vista.findViewById(R.id.btnRegistrar);
+        btnRegistrar = (Button) vista.findViewById(R.id.btnEnviar);
         rq = Volley.newRequestQueue(getContext());
 
 
