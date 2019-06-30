@@ -15,7 +15,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 
+import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -97,7 +99,7 @@ public class AgendamientoFragment extends Fragment implements Response.ErrorList
         ibObtenerHora = (ImageButton) vista.findViewById(R.id.ib_obtener_hora);
         //Evento setOnClickListener - clic
 
-        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED &&
+        /*if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.SEND_SMS) !=
                         PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]
@@ -106,8 +108,8 @@ public class AgendamientoFragment extends Fragment implements Response.ErrorList
                     }, 1000);
         } else {
 
-        }
-        ;
+        }*/
+
 
 
         ibObtenerHora.setOnClickListener(new View.OnClickListener() {
@@ -138,12 +140,18 @@ public class AgendamientoFragment extends Fragment implements Response.ErrorList
             public void onClick(View v) {
                 cargaconget();
                 enviarMensaje("983638421", "Fecha : " + etFecha.getText().toString() + " Hora: " + etHora.getText().toString() + "OBS: " + txtObs.getText().toString());
-                //cargarWebService();
+              limpiarcajas();
             }
         });
 
 
         return vista;
+    }
+
+    private void limpiarcajas() {
+        etFecha.setText("");
+        etHora.setText("");
+        txtObs.setText("");
     }
 
 
@@ -206,6 +214,19 @@ public class AgendamientoFragment extends Fragment implements Response.ErrorList
 
     private void enviarMensaje(String numero, String mensaje) {
         try {
+            int permissionCheck = ContextCompat.checkSelfPermission(
+                    getActivity(), Manifest.permission.SEND_SMS
+            );
+            if(permissionCheck!=PackageManager.PERMISSION_GRANTED){
+                Toast.makeText(getActivity().getApplicationContext(), "No se tiene permiso para enviar SMS.", Toast.LENGTH_LONG).show();
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS},225);
+            }
+            else
+            {
+                Log.i("Mensaje", "Se tiene permiso para enviar SMS!");
+            }
+
+
             SmsManager sms = SmsManager.getDefault();
             sms.sendTextMessage(numero, null, mensaje, null, null);
             Toast.makeText(getContext().getApplicationContext(), "Mensaje Enviado", Toast.LENGTH_LONG).show();
