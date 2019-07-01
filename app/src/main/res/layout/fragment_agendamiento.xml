@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondo"
     tools:context="com.example.app_taller.AgendamientoFragment"><![CDATA[
 
 
@@ -27,7 +28,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="411dp"
-        android:layout_height="50dp"
+        android:layout_height="65dp"
 
         android:gravity="center"
         android:text="Agendamiento"
@@ -37,6 +38,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView2"
@@ -162,8 +169,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/myButton"
-        android:text="Enviar"
-        />
+        android:onClick="@string/btn_registrar"
+        android:text="Enviar" />
 
 
 </LinearLayout>
