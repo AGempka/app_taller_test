@@ -38,11 +38,10 @@ public class RegistrarFragment extends Fragment implements Response.Listener<JSO
         txtTelefono=(EditText)vista.findViewById(R.id.txtTelefono);
         btnSesion=(Button) vista.findViewById(R.id.btnSesion);
 
-        btnRegistrar = (Button) vista.findViewById(R.id.btnEnviar);
+        btnRegistrar = (Button) vista.findViewById(R.id.btnRegistrar);
         rq = Volley.newRequestQueue(getContext());
 
 
-//solo para probar lalalala
 
         btnSesion.setOnClickListener(new View.OnClickListener() {
             @Override
